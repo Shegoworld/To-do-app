@@ -45,32 +45,6 @@ def show_list():
         i += 1
 
 
-
-'''
-choice = accept()
-while choice != 3:
-    if choice == 1:
-        new_task = input("Enter a New Task: ")
-        mylist.append(new_task)
-        newfile = open("newfile.txt", "a")
-        newfile.write(new_task + "\n")
-        newfile.close()
-        print(f"You have added {mylist[-1]}")
-
-    elif choice == 2:
-        if not mylist:
-            print("The list is empty")
-        else:
-            print("Here is your current TO DO list")
-            i = 1
-            for x in mylist:
-                print(f"{i}. {x}")
-                i += 1
-
-    print()
-    choice = accept()
-'''
-
 while True:
     choice = accept()
     if choice == 4:
@@ -89,12 +63,6 @@ while True:
         else:
             print("Here is your current TO DO list:")
             show_list()
-            '''
-            i = 1
-            for x in mylist:
-                print(f"{i}. {x}")
-                i += 1
-            '''
 
     elif choice == 3:
         if not mylist:
