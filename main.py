@@ -3,6 +3,7 @@ print("Hello, what would you like to do today?")
 y = ("Select '1' to Add Task \nSelect '2' to View List \nSelect '3' to Delete Task "
      "\nSelect '4' to Exit")
 
+#This block handles the user input request
 def accept():
     print(y)
     while True:
@@ -26,6 +27,7 @@ def accept():
 
 mylist = []
 
+#This block checks if the file exists
 try:
     newfile = open("newfile.txt", "r")
 except FileNotFoundError:
@@ -50,6 +52,7 @@ while True:
     if choice == 4:
         break
 
+    #This block handles Adding Tasks
     elif choice == 1:
         new_task = input("Enter a New Task: ")
         mylist.append(new_task)
@@ -57,6 +60,7 @@ while True:
             newfile.write(new_task + "\n")
         print(f"You have added {mylist[-1]}")
 
+    #This block handles viewing the list
     elif choice == 2:
         if not mylist:
             print("The list is empty")
@@ -64,6 +68,7 @@ while True:
             print("Here is your current TO DO list:")
             show_list()
 
+    # This block handles removing items from the list
     elif choice == 3:
         if not mylist:
             print("There are no tasks to remove")
