@@ -1,2 +1,3 @@
 # To-do-app
-I created a to-do app to test my knowledge of logics, loops and function
+I created my first functional app with python, a CLI To-Do App to test my knowledge of logic, loops and function.
+
